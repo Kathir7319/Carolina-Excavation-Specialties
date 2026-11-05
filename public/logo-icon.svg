@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" width="100%" height="100%" fill="none">
+  <defs>
+    <linearGradient id="iconGold" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FCD34D" />
+      <stop offset="50%" stop-color="#F59E0B" />
+      <stop offset="100%" stop-color="#D97706" />
+    </linearGradient>
+    <linearGradient id="iconShield" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#1E293B" />
+      <stop offset="100%" stop-color="#0F172A" />
+    </linearGradient>
+    <linearGradient id="iconClay" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#B44C28" />
+      <stop offset="100%" stop-color="#E05E32" />
+    </linearGradient>
+    <filter id="iconGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="6" stdDeviation="6" flood-color="#F59E0B" flood-opacity="0.3"/>
+    </filter>
+  </defs>
+
+  <!-- Outer Hex Shield -->
+  <polygon points="60,6 108,32 108,88 60,114 12,88 12,32" fill="url(#iconShield)" stroke="url(#iconGold)" stroke-width="4" stroke-linejoin="round" filter="url(#iconGlow)" />
+  
+  <!-- Inset Border -->
+  <polygon points="60,13 102,36 102,84 60,107 18,84 18,36" fill="#090D16" stroke="#334155" stroke-width="1.5" opacity="0.9" />
+
+  <!-- Carolina Pine Silhouettes -->
+  <path d="M60 28 L65 38 L62 38 L68 48 L52 48 L58 38 L55 38 Z" fill="#22C55E" opacity="0.9" />
+  <path d="M43 36 L47 43 L45 43 L49 51 L37 51 L41 43 L39 43 Z" fill="#15803D" opacity="0.75" />
+  <path d="M77 36 L81 43 L79 43 L83 51 L71 51 L75 43 L73 43 Z" fill="#15803D" opacity="0.75" />
+
+  <!-- Wake County Strata Earth Cut -->
+  <path d="M19 76 Q 40 70, 60 74 T 101 70 L 101 84 L 60 107 L 19 84 Z" fill="url(#iconClay)" opacity="0.95" />
+  <path d="M19 83 L 60 106 L 101 83" stroke="#F59E0B" stroke-width="2" fill="none" opacity="0.8"/>
+
+  <!-- Excavator Boom & Heavy Bucket Arm -->
+  <path d="M30 70 L 46 42 L 55 47 L 41 75 Z" fill="#E2E8F0" stroke="#0F172A" stroke-width="1.5" />
+  <!-- Hydraulic Ram -->
+  <path d="M38 62 L 57 51" stroke="#F59E0B" stroke-width="3" stroke-linecap="round" />
+  
+  <!-- Heavy Excavator Bucket -->
+  <path d="M51 51 L 72 45 L 85 61 L 76 77 L 55 75 Z" fill="url(#iconGold)" stroke="#78350F" stroke-width="2" stroke-linejoin="round" />
+  
+  <!-- Heavy Excavator Teeth -->
+  <polygon points="85,61 95,64 88,67" fill="#FFFFFF" stroke="#D97706" stroke-width="1" />
+  <polygon points="83,68 93,72 85,74" fill="#FFFFFF" stroke="#D97706" stroke-width="1" />
+  <polygon points="78,74 86,80 79,81" fill="#FFFFFF" stroke="#D97706" stroke-width="1" />
+
+  <!-- Heavy Pivot Pins -->
+  <circle cx="55" cy="47" r="3.2" fill="#0F172A" stroke="#FFFFFF" stroke-width="1.2" />
+  <circle cx="72" cy="45" r="2.8" fill="#0F172A" stroke="#FFFFFF" stroke-width="1.2" />
+  <circle cx="55" cy="75" r="2.5" fill="#0F172A" stroke="#FFFFFF" stroke-width="1.2" />
+</svg>

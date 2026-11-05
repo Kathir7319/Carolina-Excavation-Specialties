@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 240" width="100%" height="100%" fill="none">
+  <defs>
+    <linearGradient id="badgeGold" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FCD34D" />
+      <stop offset="50%" stop-color="#F59E0B" />
+      <stop offset="100%" stop-color="#D97706" />
+    </linearGradient>
+    <linearGradient id="badgeDark" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#1E293B" />
+      <stop offset="100%" stop-color="#0B0F19" />
+    </linearGradient>
+    <path id="circlePathTop" d="M 30, 120 A 90, 90 0 0, 1 210, 120" />
+    <path id="circlePathBottom" d="M 210, 120 A 90, 90 0 0, 1 30, 120" />
+  </defs>
+
+  <!-- Heavy Beveled Outer Ring -->
+  <circle cx="120" cy="120" r="114" fill="url(#badgeDark)" stroke="url(#badgeGold)" stroke-width="5" />
+  <circle cx="120" cy="120" r="105" fill="none" stroke="#334155" stroke-width="1.5" stroke-dasharray="3 3" />
+  <circle cx="120" cy="120" r="82" fill="#0B0F19" stroke="url(#badgeGold)" stroke-width="2.5" />
+
+  <!-- Circular Text Along Path -->
+  <text font-family="'Barlow Condensed', sans-serif" font-size="13" font-weight="800" fill="#F8FAFC" letter-spacing="3.2">
+    <textPath href="#circlePathTop" startOffset="50%" text-anchor="middle">
+      CAROLINA EXCAVATION SPECIALTIES
+    </textPath>
+  </text>
+  <text font-family="'Plus Jakarta Sans', sans-serif" font-size="10.5" font-weight="700" fill="#F59E0B" letter-spacing="2.2">
+    <textPath href="#circlePathBottom" startOffset="50%" text-anchor="middle">
+      ★ RALEIGH &amp; WAKE COUNTY NC ★
+    </textPath>
+  </text>
+
+  <!-- Center Badge Art (Excavator with Pine and Clay) -->
+  <g transform="translate(68, 68)">
+    <!-- Pines -->
+    <path d="M52 14 L56 24 L53 24 L58 32 L46 32 L51 24 L48 24 Z" fill="#22C55E" opacity="0.9" />
+    <path d="M38 20 L42 27 L40 27 L44 34 L32 34 L36 27 L34 27 Z" fill="#16A34A" opacity="0.8" />
+    <path d="M66 20 L70 27 L68 27 L72 34 L60 34 L64 27 L62 27 Z" fill="#16A34A" opacity="0.8" />
+    <!-- Ground Cut -->
+    <path d="M14 60 Q 35 52, 52 56 T 90 54 L 90 70 L 52 86 L 14 70 Z" fill="#B44C28" />
+    <!-- Excavator Boom -->
+    <path d="M22 55 L 38 31 L 46 35 L 32 60 Z" fill="#E2E8F0" stroke="#0F172A" stroke-width="1" />
+    <!-- Bucket -->
+    <path d="M42 39 L 60 34 L 70 48 L 62 61 L 45 59 Z" fill="url(#badgeGold)" stroke="#78350F" stroke-width="1.5" />
+    <polygon points="70,48 78,50 72,53" fill="#FFF" stroke="#D97706" stroke-width="0.7" />
+    <polygon points="68,54 76,57 70,59" fill="#FFF" stroke="#D97706" stroke-width="0.7" />
+    <polygon points="64,59 71,64 65,65" fill="#FFF" stroke="#D97706" stroke-width="0.7" />
+    <!-- Established Text -->
+    <rect x="22" y="66" width="60" height="15" rx="3" fill="#0F172A" stroke="#F59E0B" stroke-width="1" />
+    <text x="52" y="77" text-anchor="middle" font-family="'Plus Jakarta Sans', sans-serif" font-size="7.5" font-weight="800" fill="#FFFFFF" letter-spacing="1">
+      LICENSED SEPTIC
+    </text>
+  </g>
+</svg>

@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
-import { Phone, Calendar, Menu, X, Shield, Sparkles, MapPin, AlertCircle, ChevronRight } from 'lucide-react';
+import { Phone, Calendar, Menu, X, Shield, MapPin, AlertCircle, ChevronRight } from 'lucide-react';
 import Logo from './Logo';
 
-export default function Navbar({ activePage, setActivePage, onOpenBrandKit }) {
+export default function Navbar({ activePage, setActivePage }) {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   const navItems = [
@@ -22,7 +22,7 @@ export default function Navbar({ activePage, setActivePage, onOpenBrandKit }) {
     <>
       {/* 1. TOP EMERGENCY & AUTHORITY ANNOUNCEMENT BAR */}
       <div className="bg-slate-900 border-b border-slate-800 text-xs py-2 px-4 text-slate-300 relative z-40">
-        <div className="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-2">
+        <div className="max-w-[1440px] mx-auto flex flex-col sm:flex-row items-center justify-between gap-2">
           {/* Left badge */}
           <div className="flex items-center gap-2 text-center sm:text-left">
             <span className="flex h-2 w-2 relative">
@@ -39,23 +39,14 @@ export default function Navbar({ activePage, setActivePage, onOpenBrandKit }) {
             </span>
           </div>
 
-          {/* Right quick contact & brand kit trigger */}
+          {/* Right quick contact */}
           <div className="flex items-center gap-4">
-            <button
-              onClick={onOpenBrandKit}
-              className="inline-flex items-center gap-1.5 text-amber-400 hover:text-amber-300 font-bold text-[11px] bg-amber-500/10 border border-amber-500/30 px-2 py-0.5 rounded transition"
-              title="Inspect newly designed vector logo & brand identity"
-            >
-              <Sparkles className="w-3 h-3 text-amber-400" />
-              <span>Logo &amp; Brand Kit</span>
-            </button>
-
             <a 
               href="tel:9193027306" 
               className="flex items-center gap-1.5 font-bold text-amber-400 hover:text-amber-300 transition"
             >
               <Phone className="w-3.5 h-3.5 text-amber-500 fill-amber-500" />
-              <span>24/7 Dispatch: (919) 302-7306</span>
+              <span>24/7 Dispatch Hotline: (919) 302-7306</span>
             </a>
           </div>
         </div>
@@ -164,18 +155,6 @@ export default function Navbar({ activePage, setActivePage, onOpenBrandKit }) {
                 );
               })}
             </div>
-
-            {/* Mobile Brand Kit & Logo Access */}
-            <button
-              onClick={() => {
-                setMobileMenuOpen(false);
-                onOpenBrandKit();
-              }}
-              className="w-full flex items-center justify-center gap-2 px-4 py-2.5 rounded-xl text-xs font-bold bg-slate-900 border border-amber-500/30 text-amber-400"
-            >
-              <Sparkles className="w-4 h-4" />
-              <span>Inspect Logo &amp; Brand Assets</span>
-            </button>
 
             {/* Mobile Call-To-Action */}
             <div className="pt-2 grid grid-cols-2 gap-2">

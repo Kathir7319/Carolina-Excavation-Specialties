@@ -13,7 +13,7 @@ const FacebookIcon = ({ className = "w-3.5 h-3.5" }) => (
   </svg>
 );
 
-export default function HomePage({ setActivePage, onOpenBrandKit }) {
+export default function HomePage({ setActivePage }) {
   // Quick estimate hero state
   const [estimateData, setEstimateData] = useState({
     name: '',

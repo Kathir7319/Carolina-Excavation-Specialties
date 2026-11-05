@@ -5,7 +5,7 @@ import {
 } from 'lucide-react';
 import Logo from '../components/Logo';
 
-export default function ContactPage({ onOpenBrandKit }) {
+export default function ContactPage() {
   const [formData, setFormData] = useState({
     fullName: '',
     phone: '',
@@ -418,24 +418,6 @@ export default function ContactPage({ onOpenBrandKit }) {
                   <CheckCircle2 className="w-3.5 h-3.5" /> Fully Insured
                 </span>
               </div>
-            </div>
-
-            {/* Brand Kit Quick Trigger */}
-            <div className="bg-slate-900/60 border border-slate-800 rounded-2xl p-4 flex items-center justify-between">
-              <div className="flex items-center gap-3">
-                <Logo variant="icon" />
-                <div className="text-left">
-                  <p className="text-xs font-bold text-white">Need Official Brand Assets?</p>
-                  <p className="text-[10px] text-slate-400">Download SVG logos, vector seals &amp; colors</p>
-                </div>
-              </div>
-              <button
-                onClick={onOpenBrandKit}
-                className="px-3 py-1.5 rounded-lg bg-amber-500/10 hover:bg-amber-500/20 text-amber-400 border border-amber-500/30 text-xs font-bold transition flex items-center gap-1"
-              >
-                <Sparkles className="w-3 h-3" />
-                <span>Open Kit</span>
-              </button>
             </div>
           </div>
         </div>

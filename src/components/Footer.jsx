@@ -1,5 +1,5 @@
 import React from 'react';
-import { Phone, MapPin, Mail, Shield, CheckCircle2, Award, ArrowUpRight, Sparkles } from 'lucide-react';
+import { Phone, MapPin, Mail, Shield, CheckCircle2, Award, ArrowUpRight } from 'lucide-react';
 import Logo from './Logo';
 
 // Clean SVG icon for Facebook
@@ -9,7 +9,7 @@ const FacebookIcon = ({ className = "w-3.5 h-3.5" }) => (
   </svg>
 );
 
-export default function Footer({ setActivePage, onOpenBrandKit }) {
+export default function Footer({ setActivePage }) {
   const serviceAreas = [
     'Raleigh (Downtown & Midtown)',
     'Wake Forest',
@@ -52,17 +52,6 @@ export default function Footer({ setActivePage, onOpenBrandKit }) {
                 <CheckCircle2 className="w-3.5 h-3.5 text-blue-400" />
                 <span className="font-semibold">NC Certified Contractor</span>
               </div>
-            </div>
-
-            {/* Brand Kit Showcase Pill */}
-            <div className="pt-2">
-              <button
-                onClick={onOpenBrandKit}
-                className="inline-flex items-center gap-2 px-3 py-1.5 rounded-lg bg-amber-500/10 hover:bg-amber-500/20 border border-amber-500/30 text-amber-400 text-xs font-bold transition"
-              >
-                <Sparkles className="w-3.5 h-3.5" />
-                <span>View Brand Assets &amp; Logo Suite</span>
-              </button>
             </div>
           </div>
 

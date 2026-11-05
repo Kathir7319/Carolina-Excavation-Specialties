@@ -2,7 +2,6 @@ import React, { useState, useEffect } from 'react';
 import Navbar from './components/Navbar';
 import MobileStickyBar from './components/MobileStickyBar';
 import Footer from './components/Footer';
-import BrandKitModal from './components/BrandKitModal';
 import HomePage from './pages/HomePage';
 import SepticPage from './pages/SepticPage';
 import ExcavationPage from './pages/ExcavationPage';
@@ -10,7 +9,6 @@ import ContactPage from './pages/ContactPage';
 
 export default function App() {
   const [activePage, setActivePage] = useState('home');
-  const [brandKitOpen, setBrandKitOpen] = useState(false);
 
   // Sync hash routing
   useEffect(() => {
@@ -37,7 +35,6 @@ export default function App() {
     "@context": "https://schema.org",
     "@type": "HomeAndConstructionBusiness",
     "name": "Carolina Excavation Specialties",
-    "image": "https://carolinaexcavationspec.com/logo.svg",
     "telephone": "(919) 302-7306",
     "url": "https://carolinaexcavationspec.com",
     "address": {
@@ -71,7 +68,6 @@ export default function App() {
       <Navbar 
         activePage={activePage} 
         setActivePage={handlePageChange} 
-        onOpenBrandKit={() => setBrandKitOpen(true)} 
       />
 
       {/* Page Content Container */}
@@ -79,7 +75,6 @@ export default function App() {
         {activePage === 'home' && (
           <HomePage 
             setActivePage={handlePageChange} 
-            onOpenBrandKit={() => setBrandKitOpen(true)} 
           />
         )}
         {activePage === 'septic' && (
@@ -93,27 +88,18 @@ export default function App() {
           />
         )}
         {activePage === 'contact' && (
-          <ContactPage 
-            onOpenBrandKit={() => setBrandKitOpen(true)} 
-          />
+          <ContactPage />
         )}
       </main>
 
       {/* Footer */}
       <Footer 
         setActivePage={handlePageChange} 
-        onOpenBrandKit={() => setBrandKitOpen(true)} 
       />
 
       {/* Mobile Bottom Quick-Action Bar */}
       <MobileStickyBar 
         onOpenEstimate={() => handlePageChange('contact')} 
-      />
-
-      {/* Interactive Brand Kit & Logo Suite Modal */}
-      <BrandKitModal 
-        isOpen={brandKitOpen} 
-        onClose={() => setBrandKitOpen(false)} 
       />
     </div>
   );

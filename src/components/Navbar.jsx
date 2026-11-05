@@ -22,7 +22,7 @@ export default function Navbar({ activePage, setActivePage }) {
     <>
       {/* 1. TOP EMERGENCY & AUTHORITY ANNOUNCEMENT BAR */}
       <div className="bg-slate-900 border-b border-slate-800 text-xs py-2 px-4 text-slate-300 relative z-40">
-        <div className="max-w-[1440px] mx-auto flex flex-col sm:flex-row items-center justify-between gap-2">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-2">
           {/* Left badge */}
           <div className="flex items-center gap-2 text-center sm:text-left">
             <span className="flex h-2 w-2 relative">
@@ -54,8 +54,8 @@ export default function Navbar({ activePage, setActivePage }) {
 
       {/* 2. MAIN NAVIGATION BAR */}
       <nav className="sticky top-0 z-40 bg-slate-950/95 backdrop-blur-md border-b border-slate-800/80 transition-all">
-        <div className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex items-center justify-between h-20 gap-3 xl:gap-6">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex items-center justify-between h-20 gap-2 xl:gap-4">
             {/* Brand Logo */}
             <div 
               onClick={() => handleNavClick('home')}
@@ -70,14 +70,14 @@ export default function Navbar({ activePage, setActivePage }) {
             </div>
 
             {/* Desktop Navigation Links (Strictly aligned on single baseline) */}
-            <div className="hidden lg:flex items-center space-x-1 xl:space-x-2">
+            <div className="hidden lg:flex items-center space-x-1 xl:space-x-1.5">
               {navItems.map((item) => {
                 const isActive = activePage === item.id;
                 return (
                   <button
                     key={item.id}
                     onClick={() => handleNavClick(item.id)}
-                    className={`px-3 xl:px-3.5 py-2 rounded-lg font-semibold text-xs xl:text-sm whitespace-nowrap transition-all duration-200 relative flex items-center justify-center h-10 ${
+                    className={`px-2.5 xl:px-3 py-2 rounded-lg font-semibold text-xs xl:text-sm whitespace-nowrap transition-all duration-200 relative flex items-center justify-center h-10 ${
                       isActive
                         ? 'text-amber-400 font-bold bg-amber-500/15 shadow-sm'
                         : 'text-slate-300 hover:text-white hover:bg-slate-900/60'
@@ -85,7 +85,7 @@ export default function Navbar({ activePage, setActivePage }) {
                   >
                     <span>{item.label}</span>
                     {isActive && (
-                      <span className="absolute bottom-0 left-2.5 right-2.5 h-0.5 bg-gradient-to-r from-amber-500 to-amber-300 rounded-full"></span>
+                      <span className="absolute bottom-0 left-2 right-2 h-0.5 bg-gradient-to-r from-amber-500 to-amber-300 rounded-full"></span>
                     )}
                   </button>
                 );
@@ -93,10 +93,10 @@ export default function Navbar({ activePage, setActivePage }) {
             </div>
 
             {/* Action Buttons (Desktop - Cleanly centered with h-10 matching nav) */}
-            <div className="hidden lg:flex items-center gap-2 xl:gap-3 shrink-0">
+            <div className="hidden lg:flex items-center gap-2 shrink-0">
               <a
                 href="tel:9193027306"
-                className="flex items-center gap-2 px-3 xl:px-3.5 py-2 rounded-xl text-xs font-bold text-slate-200 bg-slate-900 border border-slate-700/80 hover:border-amber-500/40 hover:text-white transition whitespace-nowrap h-10 shrink-0"
+                className="flex items-center gap-1.5 px-3 py-2 rounded-xl text-xs font-bold text-slate-200 bg-slate-900 border border-slate-700/80 hover:border-amber-500/40 hover:text-white transition whitespace-nowrap h-10 shrink-0"
               >
                 <div className="w-2 h-2 rounded-full bg-red-500 animate-pulse shrink-0"></div>
                 <span className="font-mono">Emergency: (919) 302-7306</span>
@@ -104,7 +104,7 @@ export default function Navbar({ activePage, setActivePage }) {
 
               <button
                 onClick={() => handleNavClick('contact')}
-                className="flex items-center gap-2 px-3.5 xl:px-4 py-2 rounded-xl text-xs font-black uppercase tracking-wider text-slate-950 bg-gradient-to-r from-amber-400 to-amber-500 hover:from-amber-300 hover:to-amber-400 shadow-md shadow-amber-500/20 active:scale-95 transition whitespace-nowrap h-10 shrink-0"
+                className="flex items-center gap-1.5 px-3.5 py-2 rounded-xl text-xs font-black uppercase tracking-wider text-slate-950 bg-gradient-to-r from-amber-400 to-amber-500 hover:from-amber-300 hover:to-amber-400 shadow-md shadow-amber-500/20 active:scale-95 transition whitespace-nowrap h-10 shrink-0"
               >
                 <Calendar className="w-3.5 h-3.5 shrink-0" />
                 <span>Free On-Site Estimate</span>

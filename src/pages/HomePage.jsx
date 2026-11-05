@@ -736,21 +736,21 @@ export default function HomePage({ setActivePage }) {
               </p>
             </div>
 
-            <div className="flex flex-col sm:flex-row gap-3 w-full md:w-auto">
+            <div className="flex flex-col sm:flex-row gap-3 w-full md:w-auto shrink-0">
               <a
                 href="tel:9193027306"
-                className="px-6 py-4 rounded-xl bg-slate-950 text-white hover:bg-slate-900 font-mono font-bold text-base text-center transition flex items-center justify-center gap-2 shadow-xl"
+                className="px-6 py-4 rounded-xl bg-slate-950 text-white hover:bg-slate-900 font-mono font-bold text-base text-center transition flex items-center justify-center gap-2 shadow-xl whitespace-nowrap shrink-0"
               >
-                <Phone className="w-5 h-5 text-amber-400" />
+                <Phone className="w-5 h-5 text-amber-400 shrink-0" />
                 <span>(919) 302-7306</span>
               </a>
 
               <button
                 onClick={() => setActivePage('contact')}
-                className="px-6 py-4 rounded-xl bg-white text-slate-950 hover:bg-slate-100 font-condensed font-black text-lg uppercase tracking-wider text-center transition flex items-center justify-center gap-2 shadow-xl"
+                className="px-6 py-4 rounded-xl bg-white text-slate-950 hover:bg-slate-100 font-condensed font-black text-lg uppercase tracking-wider text-center transition flex items-center justify-center gap-2 shadow-xl whitespace-nowrap shrink-0"
               >
                 <span>Request Free Quote</span>
-                <ArrowRight className="w-5 h-5" />
+                <ArrowRight className="w-5 h-5 shrink-0" />
               </button>
             </div>
           </div>

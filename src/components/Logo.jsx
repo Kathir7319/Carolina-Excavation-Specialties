@@ -66,17 +66,17 @@ export default function Logo({
       
       {/* Main Brand Title */}
       <div className="flex items-baseline gap-1.5 leading-none">
-        <span className={`font-condensed font-black text-2xl xl:text-3xl tracking-wide leading-none ${isLight ? 'text-slate-900' : 'text-white'}`}>
+        <span className={`font-condensed font-black text-2xl tracking-wide leading-none ${isLight ? 'text-slate-900' : 'text-white'}`}>
           CAROLINA
         </span>
-        <span className="font-condensed font-extrabold text-sm xl:text-base tracking-wider text-amber-500 leading-none">
+        <span className="font-condensed font-extrabold text-sm tracking-wider text-amber-500 leading-none">
           EXCAVATION SPECIALTIES
         </span>
       </div>
 
       {/* Core Subtitle */}
       {showTagline && (
-        <span className="text-[10px] font-medium tracking-wide text-slate-400 font-sans leading-none mt-1 hidden xl:block">
+        <span className="text-[10px] font-medium tracking-wide text-slate-400 font-sans leading-none mt-1">
           Septic Installation • Land Clearing • Finish Grading
         </span>
       )}
